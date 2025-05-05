@@ -5,33 +5,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const productsContainer = document.querySelector('.products-container');
     const productCards = document.querySelectorAll('.product-card');
     
-    // Calculate the width of a single product card plus its margin
-    const cardWidth = productCards[0].offsetWidth + 20; // 20px is the gap between cards
-    
-    // Number of cards visible at once (based on container width)
-    const visibleCards = Math.floor(productsContainer.offsetWidth / cardWidth);
-    
-    // Current position (index) of the slider
+    let cardWidth = productCards[0].offsetWidth + 20; // 20px gap
+    let visibleCards = Math.floor(document.querySelector('.product-slider').offsetWidth / cardWidth);
     let currentPosition = 0;
     
     // Handle Previous button click
     prevBtn.addEventListener('click', function() {
-        if (currentPosition > 0) {
-            currentPosition--;
-            updateSliderPosition();
-        }
+        currentPosition -= visibleCards;
+        if (currentPosition < 0) currentPosition = 0;
+        updateSliderPosition();
     });
     
     // Handle Next button click
     nextBtn.addEventListener('click', function() {
-        if (currentPosition < productCards.length - visibleCards) {
-            currentPosition++;
-            updateSliderPosition();
-        }
+        currentPosition += visibleCards;
+        const maxPosition = Math.max(0, productCards.length - visibleCards);
+        if (currentPosition > maxPosition) currentPosition = maxPosition;
+        updateSliderPosition();
     });
     
     // Update the slider position
     function updateSliderPosition() {
+        // Clamp currentPosition so the last set of cards is always fully visible
+        const maxPosition = Math.max(0, productCards.length - visibleCards);
+        if (currentPosition > maxPosition) currentPosition = maxPosition;
+        if (currentPosition < 0) currentPosition = 0;
         productsContainer.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
     }
     
@@ -40,11 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Update visible cards on window resize
     window.addEventListener('resize', function() {
-        const newVisibleCards = Math.floor(productsContainer.offsetWidth / cardWidth);
-        if (newVisibleCards !== visibleCards && currentPosition > productCards.length - newVisibleCards) {
-            currentPosition = Math.max(0, productCards.length - newVisibleCards);
-            updateSliderPosition();
-        }
+        cardWidth = productCards[0].offsetWidth + 20;
+        visibleCards = Math.floor(document.querySelector('.product-slider').offsetWidth / cardWidth);
+        updateSliderPosition();
     });
     
     // Mobile menu toggle (for responsive design)
@@ -71,6 +67,9 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Pagination clicked: ' + this.textContent);
         });
     });
+    
+    // Initial position
+    updateSliderPosition();
 });
 
 // Add smooth scroll behavior for anchor links
