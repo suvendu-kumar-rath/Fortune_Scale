@@ -184,7 +184,7 @@ nav ul li a:hover {
 
 /* About Us Section */
 .about-us {
-    background-color: #f9f9f9;
+    background-color: #FFEB3B;  /* Yellow background */
 }
 
 .about-us .container {
@@ -213,7 +213,7 @@ nav ul li a:hover {
 /* Products Section */
 .products {
     padding: 60px 0;
-    background-color: #f9f9f9;
+    background-color: #FFEB3B;  /* Yellow background */
 }
 
 .section-header {
@@ -417,7 +417,7 @@ nav ul li a:hover {
 .achievements {
     padding: 60px 0;
     text-align: center;
-    background-color: #fff;
+    background-color: #FFEB3B;  /* Yellow background */
 }
 
 .achievements h2 {
@@ -444,53 +444,44 @@ nav ul li a:hover {
 }
 
 .achievement-card {
-    flex: 0 0 auto;
-    background-color: #ffff00;
-    border-radius: 8px;
-    padding: 30px 40px 30px 70px;
-    width: 320px;
-    position: relative;
+    background-color: #4CAF50;  /* Green background */
+    border-radius: 10px;
+    padding: 30px;  /* Increased padding to accommodate larger icons */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
     display: flex;
     align-items: center;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+    min-width: 300px;  /* Ensure minimum width for better layout */
 }
 
 .achievement-icon {
+    color: white;  /* White icon color for better contrast on green background */
+    font-size: 40px;  /* Increased icon size */
     width: 80px;
     height: 80px;
-    background-color: #000;
-    color: #ffff00;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    position: absolute;
-    left: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.1);  /* Slight white background for better visibility */
+    border-radius: 50%;
+    margin-right: 15px;
 }
 
 .achievement-content {
-    width: 100%;
+    color: white;  /* White text for better contrast on green background */
 }
 
 .achievement-content h3 {
-    font-size: 32px;
+    font-size: 24px;
     margin-bottom: 5px;
-    color: #000;
-    font-weight: bold;
-    margin-top: 0;
+    color: white;  /* White text for better contrast on green background */
 }
 
 .achievement-content p {
-    color: #000;
-    font-size: 18px;
-    font-weight: 500;
-    margin: 0;
+    font-size: 16px;
+    color: white;  /* White text for better contrast on green background */
 }
 
 /* Footer */
@@ -717,55 +708,103 @@ footer {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    padding: 50px 30px 40px 30px;
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 280px;
-    min-height: 220px;
+    width: 380px;
+    min-height: 180px;
     transition: box-shadow 0.3s, transform 0.3s;
+    flex-shrink: 0;
+}
+
+.client-card:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.13);
+    transform: translateY(-5px) scale(1.03);
 }
 
 .client-card img {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
     object-fit: contain;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
+}
+
+.client-card p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222;
+    margin: 0;
+    text-align: center;
+    line-height: 1.4;
+    padding: 0 10px;
 }
 
 @media (max-width: 768px) {
     .client-cards {
-        gap: 28px;
+        gap: 20px;
     }
+    
     .client-card {
-        width: 200px;
+        width: 300px;
         min-height: 160px;
-        padding: 30px 10px 25px 10px;
+        padding: 20px 15px;
     }
+    
     .client-card img {
-        width: 70px;
-        height: 70px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .client-card p {
+        font-size: 0.9rem;
     }
 }
 
 /* Our Clients Section */
 .clients {
-    background: #f9f9f9;
+    background-color: #FFEB3B;
     padding: 60px 0 40px 0;
     text-align: center;
+    overflow: hidden;
 }
+
 .clients h2 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 40px;
     letter-spacing: 1px;
 }
+
+.client-slider {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.client-cards-container {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
 .client-cards {
     display: flex;
-    justify-content: center;
     gap: 40px;
-    flex-wrap: wrap;
+    animation: slideCards 120s linear infinite;
+    width: max-content;
 }
+
+@keyframes slideCards {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-400px * 30)); /* Updated for new card width */
+    }
+}
+
 .client-card {
     background: #fff;
     border-radius: 10px;
@@ -777,32 +816,43 @@ footer {
     width: 250px;
     min-height: 220px;
     transition: box-shadow 0.3s, transform 0.3s;
+    flex-shrink: 0;
 }
+
 .client-card:hover {
     box-shadow: 0 6px 18px rgba(0,0,0,0.13);
     transform: translateY(-5px) scale(1.03);
 }
+
 .client-card img {
     width: 100px;
     height: 100px;
     object-fit: contain;
     margin-bottom: 18px;
 }
+
 .client-card p {
     font-size: 1.1rem;
     font-weight: 600;
     color: #222;
     margin: 0;
 }
+
 @media (max-width: 768px) {
+    .client-slider {
+        padding: 0;
+    }
+    
     .client-cards {
         gap: 28px;
     }
+    
     .client-card {
         width: 200px;
         min-height: 160px;
         padding: 30px 10px 25px 10px;
     }
+    
     .client-card img {
         width: 70px;
         height: 70px;

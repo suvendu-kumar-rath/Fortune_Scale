@@ -5,32 +5,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const productsContainer = document.querySelector('.products-container');
     const productCards = document.querySelectorAll('.product-card');
     
-    let cardWidth = productCards[0].offsetWidth + 20; // 20px gap
-    let visibleCards = Math.floor(document.querySelector('.product-slider').offsetWidth / cardWidth);
-    let currentPosition = 0;
+    let productCardWidth = productCards[0].offsetWidth + 20; // 20px gap
+    let visibleProductCards = Math.floor(document.querySelector('.product-slider').offsetWidth / productCardWidth);
+    let currentProductPosition = 0;
     
     // Handle Previous button click
     prevBtn.addEventListener('click', function() {
-        currentPosition -= visibleCards;
-        if (currentPosition < 0) currentPosition = 0;
-        updateSliderPosition();
+        currentProductPosition -= visibleProductCards;
+        if (currentProductPosition < 0) currentProductPosition = 0;
+        updateProductSliderPosition();
     });
     
     // Handle Next button click
     nextBtn.addEventListener('click', function() {
-        currentPosition += visibleCards;
-        const maxPosition = Math.max(0, productCards.length - visibleCards);
-        if (currentPosition > maxPosition) currentPosition = maxPosition;
-        updateSliderPosition();
+        currentProductPosition += visibleProductCards;
+        const maxPosition = Math.max(0, productCards.length - visibleProductCards);
+        if (currentProductPosition > maxPosition) currentProductPosition = maxPosition;
+        updateProductSliderPosition();
     });
     
     // Update the slider position
-    function updateSliderPosition() {
+    function updateProductSliderPosition() {
         // Clamp currentPosition so the last set of cards is always fully visible
-        const maxPosition = Math.max(0, productCards.length - visibleCards);
-        if (currentPosition > maxPosition) currentPosition = maxPosition;
-        if (currentPosition < 0) currentPosition = 0;
-        productsContainer.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
+        const maxPosition = Math.max(0, productCards.length - visibleProductCards);
+        if (currentProductPosition > maxPosition) currentProductPosition = maxPosition;
+        if (currentProductPosition < 0) currentProductPosition = 0;
+        productsContainer.style.transform = `translateX(-${currentProductPosition * productCardWidth}px)`;
     }
     
     // Add smooth transition to products container
@@ -38,11 +38,45 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Update visible cards on window resize
     window.addEventListener('resize', function() {
-        cardWidth = productCards[0].offsetWidth + 20;
-        visibleCards = Math.floor(document.querySelector('.product-slider').offsetWidth / cardWidth);
-        updateSliderPosition();
+        productCardWidth = productCards[0].offsetWidth + 20;
+        visibleProductCards = Math.floor(document.querySelector('.product-slider').offsetWidth / productCardWidth);
+        updateProductSliderPosition();
     });
     
+    // Initial position for product slider
+    updateProductSliderPosition();
+
+    // Client Slider functionality
+    const clientCards = document.querySelector('.client-cards');
+    
+    // Generate additional client cards
+    const existingClientCards = document.querySelectorAll('.client-card').length;
+    const totalClientCards = 60;
+    
+    // Create array of client data
+    const clientData = [
+        { img: 'images/icon.jpeg', name: 'NALCO' },
+        { img: 'images/Hindustan_Aeronautics_Limited_Logo.png', name: 'HAL' },
+        { img: 'images/JSW_Group_logo.svg.png', name: 'JSW' },
+        { img: 'images/barandbench-2025-04-14-499004lv-IMFA.jpg.avif', name: 'IMFA' }
+    ];
+
+    // Generate remaining cards
+    for (let i = existingClientCards; i < totalClientCards; i++) {
+        const card = document.createElement('div');
+        card.className = 'client-card';
+        const clientIndex = i % clientData.length;
+        card.innerHTML = `
+            <img src="${clientData[clientIndex].img}" alt="${clientData[clientIndex].name} Logo">
+            <p>${clientData[clientIndex].name}</p>
+        `;
+        clientCards.appendChild(card);
+    }
+
+    // Clone the first set of cards and append them to create infinite loop effect
+    const firstSet = clientCards.innerHTML;
+    clientCards.innerHTML += firstSet;
+
     // Mobile menu toggle (for responsive design)
     const menuToggle = document.createElement('button');
     menuToggle.classList.add('menu-toggle');
@@ -67,9 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Pagination clicked: ' + this.textContent);
         });
     });
-    
-    // Initial position
-    updateSliderPosition();
 });
 
 // Add smooth scroll behavior for anchor links
