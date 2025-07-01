@@ -101,6 +101,47 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Pagination clicked: ' + this.textContent);
         });
     });
+
+    // Hero Slider Functionality
+    const slides = document.querySelectorAll('.hero-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    let currentSlide = 0;
+
+    // Function to show a specific slide
+    function showSlide(index) {
+        // Hide all slides
+        slides.forEach(slide => {
+            slide.style.display = 'none';
+        });
+        // Remove active class from all indicators
+        indicators.forEach(indicator => {
+            indicator.classList.remove('active');
+        });
+        
+        // Show the selected slide and activate its indicator
+        slides[index].style.display = 'block';
+        indicators[index].classList.add('active');
+        currentSlide = index;
+    }
+
+    // Function to move to next slide
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Set up automatic sliding
+    setInterval(nextSlide, 5000);
+
+    // Add click handlers to indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            showSlide(index);
+        });
+    });
+
+    // Show first slide initially
+    showSlide(0);
 });
 
 // Add smooth scroll behavior for anchor links

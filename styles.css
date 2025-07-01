@@ -41,7 +41,7 @@ h2 {
 
 /* Header Styles */
 header {
-    background-color: #fff;
+    background-color: #4CAF50;
     padding: 15px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -66,6 +66,7 @@ nav ul li {
 
 nav ul li a {
     font-weight: 500;
+    color: white;
 }
 
 nav ul li a.active, 
@@ -75,6 +76,7 @@ nav ul li a:hover {
 
 .phone a {
     font-weight: bold;
+    color: white;
 }
 
 /* Mobile Menu Toggle */
@@ -128,7 +130,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background-image: url('images/scales1.png');
+    background-image: url('images/ScreenShorts.png');
     background-size: cover;
     background-position: center;
     color: white;
@@ -184,30 +186,508 @@ nav ul li a:hover {
 
 /* About Us Section */
 .about-us {
+    padding: 60px 0;
     background-color: #FFEB3B;  /* Yellow background */
 }
 
-.about-us .container {
+.main-heading {
+    text-align: center;
+    position: relative;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-heading h2 {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.main-heading h2 {
+    font-size: 48px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+.main-heading h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 150%;
+    height: 4px;
+    background: #4CAF50;
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.main-heading h3 {
+    font-size: 32px;
+    color: #333;
+    margin: 20px 0 10px;
+    font-weight: 600;
+}
+
+.main-heading p {
+    font-size: 20px;
+    color: #666;
+    line-height: 1.6;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.about-content {
+    padding: 20px 0;
+}
+
+.info-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: stretch;
+}
+
+.first-row {
+    gap: 20px;
+}
+
+.about-image {
+    flex: 0.8;
+    max-width: 30%;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.about-header {
     display: flex;
     align-items: center;
     gap: 40px;
+    margin-bottom: 50px;
 }
 
 .about-image {
     flex: 1;
+    max-width: 500px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.about-title {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.main-heading {
+    text-align: left;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.main-heading h2 {
+    font-size: 48px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+.main-heading h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #4CAF50;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.main-heading h3 {
+    font-size: 32px;
+    color: #333;
+    margin: 20px 0 10px;
+    font-weight: 600;
+}
+
+.main-heading p {
+    font-size: 20px;
+    color: #666;
+    line-height: 1.6;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+@keyframes slideIn {
+    to {
+        transform: scaleX(1);
+    }
 }
 
 .about-content {
-    flex: 1.5;
+    padding: 20px 0;
 }
 
-.about-content h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+.info-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
 }
 
-.about-content p {
+.info-card {
+    flex: 1;
+    background: #4CAF50;  /* Green background */
+    border-radius: 15px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    min-width: 300px;
+    color: #FFFFFF;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Make all text in cards white */
+.info-card p,
+.info-card span,
+.office-details p,
+.company-history p,
+.service-center p,
+.license-item span,
+.license-grid,
+.license-item {
+    color: #FFFFFF !important;
+}
+
+.info-card strong {
+    color: #FFFFFF !important;
+    font-weight: 600;
+}
+
+.service-center p,
+.company-history p {
+    font-size: 16px;
     line-height: 1.8;
+    margin-bottom: 15px;
+    color: #FFFFFF !important;
+}
+
+/* Ensure all headings in cards are white */
+.info-card h3,
+.office-details h3,
+.company-profile h3,
+.service-center h3,
+.company-history h3,
+.products-list h3,
+.license-details h3 {
+    color: #FFFFFF !important;
+}
+
+.product-list-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.centered-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.centered-list li {
+    margin: 12px 0;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-left: 5px;
+}
+
+.info-card h3 {
+    color: #FFFFFF !important; /* Force white color */
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    text-align: center;
+    width: 100%;
+}
+
+.card-content {
+    height: calc(100% - 60px);
+    padding-top: 10px;
+}
+
+.office-address {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #f0f0f0;
+}
+
+.compact-card {
+    padding: 20px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.office-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.office-details {
+    height: 300px;  /* Match Brief History card height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.weighbridge-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.weighbridge-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.company-profile {
+    flex: 1.2;
+}
+
+.service-center {
+    flex: 0.8;
+}
+
+.info-card h3 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4CAF50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-card p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.info-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.info-card table td {
+    padding: 12px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.service-details {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.service-details .centered-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.service-details .centered-list li {
+    margin: 12px 0;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-left: 5px;
+}
+
+.service-details h4 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.service-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-details ul li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.service-details ul li:before {
+    content: '✓';
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+}
+
+.license-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.license-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.license-item span {
+    color: #FFFFFF !important;
+}
+
+.license-item span:first-child {
+    font-weight: bold;
+}
+
+.view-all-licenses {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.view-all-licenses:hover {
+    background: #388E3C;
+}
+
+.company-motto {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background: #4CAF50;
+    border-radius: 15px;
+    color: white;
+    font-style: italic;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.company-motto p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add animation delay for each row */
+.first-row { animation-delay: 0.2s; }
+.second-row { animation-delay: 0.4s; }
+.third-row { animation-delay: 0.6s; }
+.company-motto { animation: fadeInUp 0.5s ease-out 0.8s forwards; }
+
+.company-info table td:first-child {
+    font-weight: bold;
+    width: 40%;
+    color: #333;
+}
+
+.company-info ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.company-info ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.company-motto {
+    text-align: center;
+    font-style: italic;
+    background: #4CAF50 !important;
+    color: white !important;
+    padding: 20px !important;
+}
+
+.company-motto p {
+    color: white !important;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        padding: 15px;
+    }
+
+    .company-info table td {
+        display: block;
+        width: 100%;
+    }
+
+    .company-info table td:first-child {
+        width: 100%;
+        background: #f0f0f0;
+    }
 }
 
 /* Products Section */
@@ -1042,3 +1522,43 @@ footer {
     flex-direction: column;
     height: auto;
 }
+
+/* Hero Slider Styles */
+.hero-slider {
+    position: relative;
+}
+
+.hero-slide {
+    display: none;
+}
+
+.hero-slide.active {
+    display: block;
+}
+
+/* Slider Navigation */
+/* .slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 4;
+    transition: background-color 0.3s ease;
+}
+
+.slider-nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.slider-nav.prev {
+    left: 10px;
+}
+
+.slider-nav.next {
+    right: 10px;
+} */
