@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Fortune Scales & Instruments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: #ffe600;
+        }
+        nav ul li a.nav-link {
+            color: #fff;
+            background: none;
+            padding: 6px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav ul li a.nav-link.active {
+            color: #ffe600;
+            background: none;
+        }
+        .contact-section {
+            background: #008000;
+            color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin: 40px auto;
+            padding: 40px 24px;
+            max-width: 1100px;
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            animation: fadeInUp 1s ease;
+        }
+        .contact-images {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+            background: transparent;
+        }
+        .contact-images img {
+            width: 180px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin: 16px 0;
+        }
+        .contact-details {
+            flex: 2 1 400px;
+            padding: 0 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .contact-details h2 {
+            color: #ffe600;
+            margin-bottom: 16px;
+        }
+        .contact-details p, .contact-details li, .contact-details label {
+            color: #fff;
+        }
+        .contact-form input, .contact-form textarea {
+            background: #fff;
+            color: #222;
+            border: 1.5px solid #ffe600;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+            font-size: 1em;
+            padding: 10px 14px;
+            margin-bottom: 18px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            outline: none;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #008000;
+            box-shadow: 0 2px 8px rgba(0,128,0,0.12);
+        }
+        .contact-form label {
+            color: #ffe600;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            display: block;
+            transition: color 0.3s;
+        }
+        .contact-form button {
+            background: linear-gradient(90deg, #ffe600 60%, #fff700 100%);
+            color: #008000;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+            margin-top: 8px;
+        }
+        .contact-form button:hover {
+            background: linear-gradient(90deg, #fff700 60%, #ffe600 100%);
+            color: #005a00;
+            transform: translateY(-2px) scale(1.03);
+        }
+        .contact-form {
+            animation: fadeInUp 1.2s 0.2s both;
+        }
+        @media (max-width: 1100px) {
+            .contact-section {
+                flex-direction: column;
+                align-items: center;
+                padding: 24px 8px;
+            }
+            .contact-details {
+                padding: 0;
+            }
+            .contact-images {
+                flex-direction: row;
+                width: 100%;
+                justify-content: space-between;
+            }
+            .contact-images img {
+                width: 45vw;
+                max-width: 180px;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo" style="position: relative; display: inline-block;">
+                <div style="text-align: center;">
+                    <img src="images/logo1 1.svg" alt="Fortune Scales Logo" style="width: 120px; height: auto;">
+                    <span style="position: absolute; top: 0; right: 8px; font-size: 12px; font-weight: bold; color: #000; margin-right: 50px;">TM</span>
+                    <div style="font-size: 16px; color: #fff; margin-top: 5px; white-space: nowrap; font-weight: bold;">All weighing solution under one roof</div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link" style="font-size: 18px;">Home</a></li>
+                    <li><a href="about.html" class="nav-link" style="font-size: 18px;">About Us</a></li>
+                    <li><a href="products.html" class="nav-link" style="font-size: 18px;">Products</a></li>
+                    <li><a href="contactus.html" class="nav-link active" style="font-size: 18px;">Contacts Us</a></li>
+                </ul>
+            </nav>
+            <div class="certification-images">
+                <img src="images/iso certificate.png" alt="ISO Certificate" style="width: 80px; height: auto; margin-right: 15px;">
+                <img src="images/GEM.png" alt="GEM Logo" style="width: 80px; height: auto;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-images">
+            <img src="images/Weigh Bridge.jpg" alt="Weigh Bridge Left">
+            <img src="images/ScreenShorts.png" alt="Weigh Bridge Right">
+        </div>
+        <div class="contact-details">
+            <h2>Contact Us</h2>
+            <p><strong>Address:</strong><br>
+                A/2, Bhouma Nagar, Unit-4,<br>
+                Bhubaneswar, 751001, Odisha, India</p>
+            <p><strong>Phone:</strong> +91 9437078415, 0674 - 2390115 (10 AM-6 PM), Sunday Closed</p>
+            <p><strong>Email:</strong> fortunescales@yahoo.com</p>
+            <p><strong>Website:</strong> <a href="http://fortunescales.business.site" target="_blank" style="color:#008000;">fortunescales.business.site</a></p>
+            <ul>
+                <li>For product inquiries, service requests, or support, please use the form below or contact us directly.</li>
+            </ul>
+            <form class="contact-form" id="contactForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo" style="position: relative; display: inline-block;">
+                    <img src="images/logo1 1.svg" alt="Fortune Scales Logo">
+                    <span style="position: absolute; top: 0; right: 50px; font-size: 12px; font-weight: bold; color: #fff;">TM</span>
+                </div>
+                <div class="footer-info">
+                    <p>A/2, Bhouma Nagar,Unit-4, Bhubaneswar, 751001</p>
+                    <p>+91 9437078415</p>
+                    <p>0674 - 2390115 (10 AM-6 PM), Sunday Closed</p>
+                    <p>fortunescales@yahoo.com</p>
+                    <p>http://fortunescales.business.site</p>
+                </div>
+                <div class="footer-map">
+                    <img src="images/Group 42.png" alt="Location Map">
+                </div>
+            </div>
+            <div class="social-icons-wrapper">
+                <div class="social-links">
+                    <a href="#"><img src="images/vector-2.png" alt="WhatsApp"></a>
+                    <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/Vector-3.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                    <a href="#"><img src="images/vector-4.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <p>copyrights@fortune025</p>
+    </div>
+    <script>
+    // Animated mailto form submission
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const subject = encodeURIComponent('Contact Form Submission from ' + name);
+        const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+        window.location.href = `mailto:fortunescales@yahoo.com?subject=${subject}&body=${body}`;
+    });
+    </script>
+</body>
+</html> 

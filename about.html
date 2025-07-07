@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Fortune Scales & Instruments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: #ffe600;
+        }
+        .about-us .main-heading h2 {
+            color: #008000;
+        }
+        .about-us .info-card, .about-us .office-section, .about-us .license-details, .about-us .products-list, .about-us .service-center, .about-us .company-history {
+            background: #008000;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .about-us .info-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+        .about-us .about-image img, .about-us .weighbridge-image img {
+            max-width: 350px;
+            border-radius: 10px;
+        }
+        .about-us .about-image {
+            flex: 1 1 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about-us .office-section {
+            flex: 2 1 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .about-us .weighbridge-image {
+            margin-top: 16px;
+            text-align: center;
+        }
+        .about-us .info-card {
+            flex: 1 1 350px;
+        }
+        .about-us .company-profile table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .about-us .company-profile td {
+            padding: 4px 8px;
+            border-bottom: 1px solid #eee;
+            color: #fff;
+        }
+        .about-us .license-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .about-us .license-item {
+            background: #006400;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .about-us .centered-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .about-us .centered-list li {
+            margin-bottom: 6px;
+            color: #fff;
+        }
+        .about-us .company-motto {
+            text-align: center;
+            font-style: italic;
+            margin-top: 32px;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .about-us .info-card h3, .about-us .office-section h3 {
+            color: #ffe600;
+        }
+        @media (max-width: 900px) {
+            .about-us .info-row {
+                flex-direction: column;
+            }
+            .about-us .about-image img, .about-us .weighbridge-image img {
+                max-width: 100%;
+            }
+        }
+        nav ul li a.nav-link {
+            color: #fff;
+            background: none;
+            padding: 6px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav ul li a.nav-link.active {
+            color: #ffe600;
+            background: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (copied from index.html, with About Us active) -->
+    <header>
+        <div class="container header-container">
+            <div class="logo" style="position: relative; display: inline-block;">
+                <div style="text-align: center;">
+                    <img src="images/logo1 1.svg" alt="Fortune Scales Logo" style="width: 120px; height: auto;">
+                    <span style="position: absolute; top: 0; right: 8px; font-size: 12px; font-weight: bold; color: #000; margin-right: 50px;">TM</span>
+                    <div style="font-size: 16px; color: #fff; margin-top: 5px; white-space: nowrap; font-weight: bold;">All weighing solution under one roof</div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link" style="font-size: 18px;">Home</a></li>
+                    <li><a href="about.html" class="nav-link active" style="font-size: 18px;">About Us</a></li>
+                    <li><a href="#" class="nav-link" style="font-size: 18px;">Products</a></li>
+                    <li><a href="#" class="nav-link" style="font-size: 18px;">Contacts Us</a></li>
+                </ul>
+            </nav>
+            <div class="certification-images">
+                <img src="images/iso certificate.png" alt="ISO Certificate" style="width: 80px; height: auto; margin-right: 15px;">
+                <img src="images/GEM.png" alt="GEM Logo" style="width: 80px; height: auto;">
+            </div>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <div class="container">
+            <div class="main-heading">
+                <h2>About Us</h2>
+            </div>
+            <div class="about-content">
+                <div class="info-row first-row">
+                    <div class="about-image">
+                        <img src="images/unsplash_thdb7o0nLyc (1).png" alt="About Us Image">
+                    </div>
+                    <div class="office-section">
+                        <div class="info-card office-details">
+                            <h3>Office</h3>
+                            <div class="card-content">
+                                <p class="office-address">
+                                    A/2, Bhouma Nagar<br>
+                                    Unit- IV, Bhubaneswar-751001,<br>
+                                    State- Odisha<br>
+                                    Tel: 0674 - 2390115, 9078998415, 9437078415<br>
+                                    Fax: 0674 – 2390115
+                                </p>
+                            </div>
+                        </div>
+                        <div class="weighbridge-image">
+                            <img src="images/ScreenShorts.png" alt="Weigh Bridge">
+                        </div>
+                    </div>
+                    <div class="info-card company-profile">
+                        <h3>Company Profile</h3>
+                        <table>
+                            <tr><td>Company Name:</td><td>Fortune Scales and Instruments</td></tr>
+                            <tr><td>Head Office:</td><td>A/2, Bhouma Nagar<br>Unit- IV, Bhubaneswar-751 001,<br>State- Odisha</td></tr>
+                            <tr><td>Company Type:</td><td>Proprietorship Firm</td></tr>
+                            <tr><td>Proprietor Name:</td><td>Pitabas Das</td></tr>
+                            <tr><td>Type of Business:</td><td>Manufacturing of weighbridges & other weighing solutions</td></tr>
+                            <tr><td>Date of incorporation:</td><td>06.06.2006</td></tr>
+                            <tr><td>Pan No:</td><td>ADRPD7375D</td></tr>
+                            <tr><td>GSTIN No:</td><td>21ADRPD7375D1ZN</td></tr>
+                            <tr><td>Email ID:</td><td>fortunescales@yahoo.com</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="info-row second-row">
+                    <div class="info-card service-center compact-card">
+                        <h3>Electronic Service Center</h3>
+                        <p>HO, Bhubaneswar</p>
+                        <div class="service-details">
+                            <ul class="centered-list">
+                                <li>• 24/7 Technical Support</li>
+                                <li>• Calibration Services</li>
+                                <li>• Maintenance & Repair</li>
+                                <li>• Installation & Setup</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info-card company-history">
+                        <h3>Brief History</h3>
+                        <p>
+                            Fortune Scales and Instruments was formed in the year 2006, with a view to provide
+                            high quality products and service than available in the market to cater the need of the
+                            industries, wholesale, retail and other allied markets.
+                        </p>
+                        <p>
+                            <strong>Management:</strong> The Management is headed by Proprietor Mr. Pitabas Das, who had started
+                            his very own career in this field since 1971 and have vast knowledge with experience in
+                            the field of complete weighing solutions.
+                        </p>
+                        <p>
+                            With a very humble beginning, Fortune Scales and Instruments has gradually climbed
+                            the ladder of success and now we are expanding our area of operations throughout the
+                            country.
+                        </p>
+                    </div>
+                </div>
+                <div class="info-row third-row">
+                    <div class="info-card products-list">
+                        <h3>Our Products</h3>
+                        <div class="product-list-container">
+                            <ul class="centered-list">
+                                <li>• Weighbridges (Pit Type, Pit Less)</li>
+                                <li>• Mobile Weighbridges</li>
+                                <li>• Unmanned Weighbridges</li>
+                                <li>• Weighing-cum-Counting Machines, Jewellery Scales, Lab. Balances</li>
+                                <li>• Bench Platform Scales, Floor Platform Scales</li>
+                                <li>• Dormant Platform Scales, Customized Weighing Solutions</li>
+                                <li>• Table Top / Counter Scales, Hanging Scales</li>
+                                <li>• Crane Scales (Both Standard & Thermal)</li>
+                                <li>• Price Computing Retail Scales</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info-card license-details">
+                        <h3>LICENSE DETAILS</h3>
+                        <div class="license-grid">
+                            <div class="license-item">
+                                <span>MSME Registration:</span>
+                                <span>UDYAM-OD-19-0005939</span>
+                            </div>
+                            <div class="license-item">
+                                <span>ISO 9001:2015:</span>
+                                <span>2024Q006</span>
+                            </div>
+                            <div class="license-item">
+                                <span>GST Registration:</span>
+                                <span>21ADRPD7375D1ZN</span>
+                            </div>
+                            <div class="license-item">
+                                <span>Trade License:</span>
+                                <span>782/2015 (4049/2019)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="company-motto">
+                    <p>"At Fortune Scales we believe that our customers are the best people who can evaluate and certify the facts stated above."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (copied from index.html) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo" style="position: relative; display: inline-block;">
+                    <img src="images/logo1 1.svg" alt="Fortune Scales Logo">
+                    <span style="position: absolute; top: 0; right: 50px; font-size: 12px; font-weight: bold; color: #fff;">TM</span>
+                </div>
+                <div class="footer-info">
+                    <p>A/2, Bhouma Nagar,Unit-4, Bhubaneswar, 751001</p>
+                    <p>+91 9437078415</p>
+                    <p>0674 - 2390115 (10 AM-6 PM), Sunday Closed</p>
+                    <p>fortunescales@yahoo.com</p>
+                    <p>http://fortunescales.business.site</p>
+                </div>
+                <div class="footer-map">
+                    <img src="images/Group 42.png" alt="Location Map">
+                </div>
+            </div>
+            <div class="social-icons-wrapper">
+                <div class="social-links">
+                    <a href="#"><img src="images/vector-2.png" alt="WhatsApp"></a>
+                    <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/Vector-3.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                    <a href="#"><img src="images/vector-4.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <p>copyrights@fortune025</p>
+    </div>
+</body>
+</html> 

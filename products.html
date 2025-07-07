@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Fortune Scales & Instruments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: #ffe600;
+        }
+        nav ul li a.nav-link {
+            color: #fff;
+            background: none;
+            padding: 6px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav ul li a.nav-link.active {
+            color: #ffe600;
+            background: none;
+        }
+        .product-card {
+            background: #ffe600 !important;
+            color: #222 !important;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .product-card h3 {
+            color: #008000 !important;
+        }
+        .product-info {
+            color: #222 !important;
+        }
+        .products {
+            background: #ffe600;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .container {
+            background: transparent;
+        }
+        /* Weigh Bridges Section */
+        .weighbridge-section {
+            color: #008000;
+        }
+        .weighbridge-section h3 {
+            color: #008000 !important;
+        }
+        .weighbridge-section .product-card {
+            background: #008000 !important;
+            color: #fff !important;
+        }
+        .weighbridge-section .product-card h3,
+        .weighbridge-section .product-info {
+            color: #fff !important;
+        }
+        /* Weighing Scales & Other Products Section */
+        .weighing-scales-section,
+        .other-products-section {
+            background: #ffe600 !important;
+            padding: 24px 0;
+            border-radius: 12px;
+            margin-bottom: 32px;
+        }
+        .weighing-scales-section h3,
+        .other-products-section h3 {
+            color: #008000 !important;
+        }
+        .weighing-scales-section .product-card,
+        .other-products-section .product-card {
+            background: #008000 !important;
+            color: #fff !important;
+        }
+        .weighing-scales-section .product-card h3,
+        .other-products-section .product-card h3,
+        .weighing-scales-section .product-info,
+        .other-products-section .product-info {
+            color: #fff !important;
+        }
+        .weighing-scales-section,
+        .other-products-section {
+            color: #008000 !important;
+        }
+        .section-header h2,
+        .products-intro {
+            color: #008000 !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo" style="position: relative; display: inline-block;">
+                <div style="text-align: center;">
+                    <img src="images/logo1 1.svg" alt="Fortune Scales Logo" style="width: 120px; height: auto;">
+                    <span style="position: absolute; top: 0; right: 8px; font-size: 12px; font-weight: bold; color: #000; margin-right: 50px;">TM</span>
+                    <div style="font-size: 16px; color: #fff; margin-top: 5px; white-space: nowrap; font-weight: bold;">All weighing solution under one roof</div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link" style="font-size: 18px;">Home</a></li>
+                    <li><a href="about.html" class="nav-link" style="font-size: 18px;">About Us</a></li>
+                    <li><a href="products.html" class="nav-link active" style="font-size: 18px;">Products</a></li>
+                    <li><a href="#" class="nav-link" style="font-size: 18px;">Contacts Us</a></li>
+                </ul>
+            </nav>
+            <div class="certification-images">
+                <img src="images/iso certificate.png" alt="ISO Certificate" style="width: 80px; height: auto; margin-right: 15px;">
+                <img src="images/GEM.png" alt="GEM Logo" style="width: 80px; height: auto;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Section (copied from index.html lines 153-803) -->
+    <section class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Products</h2>
+            </div>
+            <p class="products-intro">
+                We offer a wide range of weighing solutions including Pit Type & Pit Less Weighbridges, Mobile and
+                Unmanned Weighbridges, Counting Machines, Jewellery and Lab Scales, Platform and Tabletop Scales,
+                Hanging and Crane Scales—designed for precision, durability, and diverse industrial and commercial
+                needs.
+            </p>
+            <!-- Weigh Bridge Section -->
+            <div class="weighbridge-section">
+                <h3>Weigh Bridges</h3>
+                <div class="weighbridge-slider">
+                    <div class="weighbridge-container">
+                        <!-- First set of 5 cards -->
+                        <div class="product-card">
+                            <img src="images/ScreenShorts.png" alt="PIT Less Road Weighbridges">
+                            <div class="product-info">
+                                <h3>PIT Less Road Weighbridges</h3>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="images/Product/Pit-Type-Weighbridge-big.jpg" alt="PIT Type Road Weighbridges">
+                            <div class="product-info">
+                                <h3>PIT Type Road Weighbridges</h3>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="images/Product/portable-weighbridge-500x500-1.jpg" alt="Portable Mobile Weighbridges">
+                            <div class="product-info">
+                                <h3>Portable Mobile Weighbridges</h3>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="images/Product/Truck-scale.jpg" alt="Customized Weighbridges">
+                            <div class="product-info">
+                                <h3>Customized Weighbridges</h3>
+                            </div>
+                        </div>
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="product-card">
+                            <img src="images/ScreenShorts.png" alt="PIT Less Road Weighbridges">
+                            <div class="product-info">
+                                <h3>PIT Less Road Weighbridges</h3>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="images/Product/Pit-Type-Weighbridge-big.jpg" alt="PIT Type Road Weighbridges">
+                            <div class="product-info">
+                                <h3>PIT Type Road Weighbridges</h3>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="images/ScreenShorts.png" alt="Portable Mobile Weighbridges">
+                            <div class="product-info">
+                                <h3>Portable Mobile Weighbridges</h3>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="images/ScreenShorts.png" alt="Customized Weighbridges">
+                            <div class="product-info">
+                                <h3>Customized Weighbridges</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Other Products Section -->
+            <div class="other-products-section">
+                <div class="other-products-slider">
+                    <div class="other-products-container">
+                        <!-- Other Products cards removed -->
+                    </div>
+                </div>
+                <!-- WEIGHING SCALES Subsection -->
+                <div class="weighing-scales-section">
+                    <h3>WEIGHING SCALES</h3>
+                    <div class="weighing-scales-slider">
+                        <div class="weighing-scales-container">
+                            <!-- First set of 3 cards -->
+                            <div class="product-card">
+                                <img src="images/Screenshot (15) 3.png" alt="Simple Platform Weighing Scales">
+                                <div class="product-info">
+                                    <h3>Simple Platform Weighing Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Product/heavy-duty-platform-scale.jpg" alt="Heavy Duty Platform Weighing Scales">
+                                <div class="product-info">
+                                    <h3>Heavy Duty Platform Weighing Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Product/platform-scale-balance.jpeg" alt="Dormant Platform Weighing Scales">
+                                <div class="product-info">
+                                    <h3>Dormant Platform Weighing Scales</h3>
+                                </div>
+                            </div>
+                            <!-- Duplicate set for seamless loop -->
+                            <div class="product-card">
+                                <img src="images/Screenshot (15) 3.png" alt="Simple Platform Weighing Scales">
+                                <div class="product-info">
+                                    <h3>Simple Platform Weighing Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Product/heavy-duty-platform-scale.jpg" alt="Heavy Duty Platform Weighing Scales">
+                                <div class="product-info">
+                                    <h3>Heavy Duty Platform Weighing Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Product/platform-scale-balance.jpeg" alt="Dormant Platform Weighing Scales">
+                                <div class="product-info">
+                                    <h3>Dormant Platform Weighing Scales</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Other Products Section -->
+                <div class="other-products-section">
+                    <h3>Other Products</h3>
+                    <div class="other-products-slider">
+                        <div class="other-products-container">
+                            <div class="product-card">
+                                <img src="images/Screenshot (15) 3.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Bench Platform Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (16) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Floor Platform Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (19) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Table Top / Counter Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (20) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Crane Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (15) 3.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Hanging Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (16) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Jewelry Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (19) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Laboratory Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (20) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Precision Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (15) 3.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Counting Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (16) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Industrial Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (19) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Commercial Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (20) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Retail Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (15) 3.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Medical Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (16) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Veterinary Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (19) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Agricultural Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (20) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Food Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (15) 3.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Shipping Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (16) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Postal Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (19) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Kitchen Scales</h3>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (20) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
+                                    <h3>Portable Scales</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo" style="position: relative; display: inline-block;">
+                    <img src="images/logo1 1.svg" alt="Fortune Scales Logo">
+                    <span style="position: absolute; top: 0; right: 50px; font-size: 12px; font-weight: bold; color: #fff;">TM</span>
+                </div>
+                <div class="footer-info">
+                    <p>A/2, Bhouma Nagar,Unit-4, Bhubaneswar, 751001</p>
+                    <p>+91 9437078415</p>
+                    <p>0674 - 2390115 (10 AM-6 PM), Sunday Closed</p>
+                    <p>fortunescales@yahoo.com</p>
+                    <p>http://fortunescales.business.site</p>
+                </div>
+                <div class="footer-map">
+                    <img src="images/Group 42.png" alt="Location Map">
+                </div>
+            </div>
+            <div class="social-icons-wrapper">
+                <div class="social-links">
+                    <a href="#"><img src="images/vector-2.png" alt="WhatsApp"></a>
+                    <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/Vector-3.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/telegram.png" alt="Telegram"></a>
+                    <a href="#"><img src="images/vector-4.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <p>copyrights@fortune025</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

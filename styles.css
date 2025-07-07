@@ -853,14 +853,11 @@ nav ul li a:hover {
 }
 
 .weighing-scales-section .product-card {
+    background: #ffe600 !important;
+    color: #008000 !important;
     flex: 0 0 300px;
-    background: #FF9800;  /* Orange background */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
 }
 
 .weighing-scales-section .product-card img {
@@ -933,14 +930,11 @@ nav ul li a:hover {
 }
 
 .other-products-section .product-card {
-    flex: 0 0 300px;
-    background: #FFEB3B;  /* Light yellow background */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
+    text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .other-products-section .product-card img {
@@ -953,10 +947,7 @@ nav ul li a:hover {
 }
 
 .other-products-section .product-info {
-    padding: 1rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+    text-align: center;
 }
 
 .other-products-section .product-info h3 {

@@ -7,6 +7,20 @@
     <title>Fortune Scales & Instruments</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        nav ul li a.nav-link {
+            color: #fff;
+            background: none;
+            padding: 6px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav ul li a.nav-link.active {
+            color: #ffe600;
+            background: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,20 +28,23 @@
     <header>
         <div class="container header-container">
             <div class="logo" style="position: relative; display: inline-block;">
-                <img src="images/logo1 1.svg" alt="Fortune Scales Logo" style="width: 120px; height: auto;">
-                <span
-                    style="position: absolute; top: 0; right: -18px; font-size: 12px; font-weight: bold; color: #000;">TM</span>
+                <div style="text-align: center;">
+                    <img src="images/logo1 1.svg" alt="Fortune Scales Logo" style="width: 120px; height: auto;">
+                    <span style="position: absolute; top: 0; right: 8px; font-size: 12px; font-weight: bold; color: #000; margin-right: 50px;">TM</span>
+                    <div style="font-size: 16px; color: #fff; margin-top: 5px; white-space: nowrap; font-weight: bold;">All weighing solution under one roof</div>
+                </div>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#" class="active" style="font-size: 18px;">Home</a></li>
-                    <li><a href="#" style="font-size: 18px;">About Us</a></li>
-                    <li><a href="#" style="font-size: 18px;">Products</a></li>
-                    <li><a href="#" style="font-size: 18px;">Contacts Us</a></li>
+                    <li><a href="#" class="nav-link active" style="font-size: 18px;">Home</a></li>
+                    <li><a href="about.html" class="nav-link" style="font-size: 18px;">About Us</a></li>
+                    <li><a href="products.html" class="nav-link" style="font-size: 18px;">Products</a></li>
+                    <li><a href="contactus.html" class="nav-link" style="font-size: 18px;">Contacts Us</a></li>
                 </ul>
             </nav>
-            <div class="phone">
-                <a href="tel:+919437078415">+91 9437078415</a>
+            <div class="certification-images">
+                <img src="images/iso certificate.png" alt="ISO Certificate" style="width: 80px; height: auto; margin-right: 15px;">
+                <img src="images/GEM.png" alt="GEM Logo" style="width: 80px; height: auto;">
             </div>
         </div>
     </header>
@@ -37,10 +54,6 @@
         <div class="hero-slider">
             <!-- Slide 1 -->
             <div class="hero-slide active">
-                <img src="images/iso certificate.png" alt="ISO Certificate"
-                    style="position: absolute; top: 30px; left: 30px; z-index: 3; width: 80px; height: auto;">
-                <img src="images/GEM.png" alt="GEM Logo"
-                    style="position: absolute; top: 30px; right: 30px; z-index: 3; width: 80px; height: auto;">
                 <div class="container">
                     <div class="hero-content">
                         <h1>Fortune Scales & Instruments</h1>
@@ -61,10 +74,6 @@
 
             <!-- Slide 2 -->
             <div class="hero-slide">
-                <img src="images/iso certificate.png" alt="ISO Certificate"
-                    style="position: absolute; top: 30px; left: 30px; z-index: 3; width: 80px; height: auto;">
-                <img src="images/GEM.png" alt="GEM Logo"
-                    style="position: absolute; top: 30px; right: 30px; z-index: 3; width: 80px; height: auto;">
                 <div class="container">
                     <div class="hero-content">
                         <h1>Weigh Bridges</h1>
@@ -83,10 +92,6 @@
 
             <!-- Slide 3 -->
             <div class="hero-slide">
-                <img src="images/iso certificate.png" alt="ISO Certificate"
-                    style="position: absolute; top: 30px; left: 30px; z-index: 3; width: 80px; height: auto;">
-                <img src="images/GEM.png" alt="GEM Logo"
-                    style="position: absolute; top: 30px; right: 30px; z-index: 3; width: 80px; height: auto;">
                 <div class="container">
                     <div class="hero-content">
                         <h1>Our Products</h1>
@@ -114,62 +119,12 @@
         <div class="container">
             <div class="main-heading">
                 <h2>About Us</h2>
-                <!-- <h3>Fortune Scales and Instruments</h3>
-                <p>Your Trusted Partner in Precision Weighing Solutions</p> -->
             </div>
             
             <div class="about-content">
                 <div class="info-row first-row">
                     <div class="about-image">
-                        <img src="images/unsplash_thdb7o0nLyc (1).png" alt="About Us Image">
-                    </div>
-
-                    <div class="office-section">
-                        <div class="info-card office-details">
-                            <h3>Office</h3>
-                            <div class="card-content">
-                                <p class="office-address">
-                                    A/2, Bhouma Nagar<br>
-                                    Unit- IV, Bhubaneswar-751001,<br>
-                                    State- Odisha<br>
-                                    Tel: 0674 - 2390115, 9078998415, 9437078415<br>
-                                    Fax: 0674 – 2390115
-                                </p>
-                            </div>
-                        </div>
-                        <div class="weighbridge-image">
-                            <img src="images/ScreenShorts.png" alt="Weigh Bridge">
-                        </div>
-                    </div>
-
-                    <div class="info-card company-profile">
-                        <h3>Company Profile</h3>
-                        <table>
-                            <tr><td>Company Name:</td><td>Fortune Scales and Instruments</td></tr>
-                            <tr><td>Head Office:</td><td>A/2, Bhouma Nagar<br>Unit- IV, Bhubaneswar-751 001,<br>State- Odisha</td></tr>
-                            <tr><td>Company Type:</td><td>Proprietorship Firm</td></tr>
-                            <tr><td>Proprietor Name:</td><td>Pitabas Das</td></tr>
-                            <tr><td>Type of Business:</td><td>Manufacturing of weighbridges & other weighing solutions</td></tr>
-                            <tr><td>Date of incorporation:</td><td>06.06.2006</td></tr>
-                            <tr><td>Pan No:</td><td>ADRPD7375D</td></tr>
-                            <tr><td>GSTIN No:</td><td>21ADRPD7375D1ZN</td></tr>
-                            <tr><td>Email ID:</td><td>fortunescales@yahoo.com</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="info-row second-row">
-                    <div class="info-card service-center compact-card">
-                        <h3>Electronic Service Center</h3>
-                        <p>HO, Bhubaneswar</p>
-                        <div class="service-details">
-                            <ul class="centered-list">
-                                <li>• 24/7 Technical Support</li>
-                                <li>• Calibration Services</li>
-                                <li>• Maintenance & Repair</li>
-                                <li>• Installation & Setup</li>
-                            </ul>
-                        </div>
+                        <img src="images/unsplash_thdb7o0nLyc (1).png" alt="About Us Image" style="width: 400px; height: auto;">
                     </div>
 
                     <div class="info-card company-history">
@@ -190,51 +145,6 @@
                             country.
                         </p>
                     </div>
-                </div>
-
-                <div class="info-row third-row">
-                    <div class="info-card products-list">
-                        <h3>Our Products</h3>
-                        <div class="product-list-container">
-                            <ul class="centered-list">
-                                <li>• Weighbridges (Pit Type, Pit Less)</li>
-                                <li>• Mobile Weighbridges</li>
-                                <li>• Unmanned Weighbridges</li>
-                                <li>• Weighing-cum-Counting Machines, Jewellery Scales, Lab. Balances</li>
-                                <li>• Bench Platform Scales, Floor Platform Scales</li>
-                                <li>• Dormant Platform Scales, Customized Weighing Solutions</li>
-                                <li>• Table Top / Counter Scales, Hanging Scales</li>
-                                <li>• Crane Scales (Both Standard & Thermal)</li>
-                                <li>• Price Computing Retail Scales</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="info-card license-details">
-                        <h3>LICENSE DETAILS</h3>
-                        <div class="license-grid">
-                            <div class="license-item">
-                                <span>MSME Registration:</span>
-                                <span>UDYAM-OD-19-0005939</span>
-                            </div>
-                            <div class="license-item">
-                                <span>ISO 9001:2015:</span>
-                                <span>2024Q006</span>
-                            </div>
-                            <div class="license-item">
-                                <span>GST Registration:</span>
-                                <span>21ADRPD7375D1ZN</span>
-                            </div>
-                            <div class="license-item">
-                                <span>Trade License:</span>
-                                <span>782/2015 (4049/2019)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="company-motto">
-                    <p>"At Fortune Scales we believe that our customers are the best people who can evaluate and certify the facts stated above."</p>
                 </div>
             </div>
         </div>
@@ -263,7 +173,7 @@
                             <img src="images/ScreenShorts.png" alt="PIT Less Road Weighbridges">
                             <div class="product-info">
                                 <h3>PIT Less Road Weighbridges</h3>
-                                <ul>
+                                <!-- <ul>
                                     <li>Capacity : 50 Kg to 5000 Kg</li>
                                     <li>Least Count : 5 gm to 500 gm</li>
                                     <li>Accuracy – Class-III</li>
@@ -275,14 +185,14 @@
                                     <p>The system provides automated control and data collection, reducing the chances for mistakes and improving overall control.</p>
                                     <p>The system is quick to react, enhancing efficiency and real-time performance.</p>
                                     <p>By eliminating mechanical components, the system avoids inaccuracies caused by wear and tear, ensuring precision.</p>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="product-card">
                             <img src="images/Product/Pit-Type-Weighbridge-big.jpg" alt="PIT Type Road Weighbridges">
                             <div class="product-info">
                                 <h3>PIT Type Road Weighbridges</h3>
-                                <ul>
+                                <!-- <ul>
                                     <li>Capacity : 50 Kg to 5000 Kg</li>
                                     <li>Least Count : 5 gm to 500 gm</li>
                                     <li>Accuracy – Class-III</li>
@@ -294,14 +204,14 @@
                                     <p>The system provides automated control and data collection, reducing the chances for mistakes and improving overall control.</p>
                                     <p>The system is quick to react, enhancing efficiency and real-time performance.</p>
                                     <p>By eliminating mechanical components, the system avoids inaccuracies caused by wear and tear, ensuring precision.</p>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="product-card">
                             <img src="images/Product/portable-weighbridge-500x500-1.jpg" alt="Portable Mobile Weighbridges">
                             <div class="product-info">
                                 <h3>Portable Mobile Weighbridges</h3>
-                                <ul>
+                                <!-- <ul>
                                     <li>Capacity : 50 Kg to 5000 Kg</li>
                                     <li>Least Count : 5 gm to 500 gm</li>
                                     <li>Accuracy – Class-III</li>
@@ -313,14 +223,14 @@
                                     <p>The system provides automated control and data collection, reducing the chances for mistakes and improving overall control.</p>
                                     <p>The system is quick to react, enhancing efficiency and real-time performance.</p>
                                     <p>By eliminating mechanical components, the system avoids inaccuracies caused by wear and tear, ensuring precision.</p>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="product-card">
                             <img src="images/Product/Truck-scale.jpg" alt="Customized Weighbridges">
                             <div class="product-info">
                                 <h3>Customized Weighbridges</h3>
-                                <ul>
+                                <!-- <ul>
                                     <li>Capacity : 50 Kg to 5000 Kg</li>
                                     <li>Least Count : 5 gm to 500 gm</li>
                                     <li>Accuracy – Class-III</li>
@@ -332,14 +242,14 @@
                                     <p>The system provides automated control and data collection, reducing the chances for mistakes and improving overall control.</p>
                                     <p>The system is quick to react, enhancing efficiency and real-time performance.</p>
                                     <p>By eliminating mechanical components, the system avoids inaccuracies caused by wear and tear, ensuring precision.</p>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="product-card">
+                        <!-- <div class="product-card">
                             <img src="images/ScreenShorts.png" alt="Insured Weighbridges">
                             <div class="product-info">
-                                <h3>Insured Weighbridges of above types</h3>
-                                <ul>
+                                <h3>Insured Weighbridges of above types</h3> -->
+                                <!-- <ul>
                                     <li>Capacity : 50 Kg to 5000 Kg</li>
                                     <li>Least Count : 5 gm to 500 gm</li>
                                     <li>Accuracy – Class-III</li>
@@ -351,15 +261,15 @@
                                     <p>The system provides automated control and data collection, reducing the chances for mistakes and improving overall control.</p>
                                     <p>The system is quick to react, enhancing efficiency and real-time performance.</p>
                                     <p>By eliminating mechanical components, the system avoids inaccuracies caused by wear and tear, ensuring precision.</p>
-                                </div>
-                            </div>
-                        </div>
+                                </div> -->
+                            <!-- </div>
+                        </div> -->
                         <!-- Duplicate set for seamless loop -->
                         <div class="product-card">
                             <img src="images/ScreenShorts.png" alt="PIT Less Road Weighbridges">
                             <div class="product-info">
                                 <h3>PIT Less Road Weighbridges</h3>
-                                <ul>
+                                <!-- <ul>
                                     <li>Capacity : 50 Kg to 5000 Kg</li>
                                     <li>Least Count : 5 gm to 500 gm</li>
                                     <li>Accuracy – Class-III</li>
@@ -371,14 +281,14 @@
                                     <p>The system provides automated control and data collection, reducing the chances for mistakes and improving overall control.</p>
                                     <p>The system is quick to react, enhancing efficiency and real-time performance.</p>
                                     <p>By eliminating mechanical components, the system avoids inaccuracies caused by wear and tear, ensuring precision.</p>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="product-card">
                             <img src="images/Product/Pit-Type-Weighbridge-big.jpg" alt="PIT Type Road Weighbridges">
                             <div class="product-info">
                                 <h3>PIT Type Road Weighbridges</h3>
-                                <ul>
+                                <!-- <ul>
                                     <li>Capacity : 50 Kg to 5000 Kg</li>
                                     <li>Least Count : 5 gm to 500 gm</li>
                                     <li>Accuracy – Class-III</li>
@@ -390,14 +300,14 @@
                                     <p>The system provides automated control and data collection, reducing the chances for mistakes and improving overall control.</p>
                                     <p>The system is quick to react, enhancing efficiency and real-time performance.</p>
                                     <p>By eliminating mechanical components, the system avoids inaccuracies caused by wear and tear, ensuring precision.</p>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="product-card">
                             <img src="images/ScreenShorts.png" alt="Portable Mobile Weighbridges">
                             <div class="product-info">
                                 <h3>Portable Mobile Weighbridges</h3>
-                                <ul>
+                                <!-- <ul>
                                     <li>Capacity : 50 Kg to 5000 Kg</li>
                                     <li>Least Count : 5 gm to 500 gm</li>
                                     <li>Accuracy – Class-III</li>
@@ -409,14 +319,14 @@
                                     <p>The system provides automated control and data collection, reducing the chances for mistakes and improving overall control.</p>
                                     <p>The system is quick to react, enhancing efficiency and real-time performance.</p>
                                     <p>By eliminating mechanical components, the system avoids inaccuracies caused by wear and tear, ensuring precision.</p>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="product-card">
                             <img src="images/ScreenShorts.png" alt="Customized Weighbridges">
                             <div class="product-info">
                                 <h3>Customized Weighbridges</h3>
-                                <ul>
+                                <!-- <ul>
                                     <li>Capacity : 50 Kg to 5000 Kg</li>
                                     <li>Least Count : 5 gm to 500 gm</li>
                                     <li>Accuracy – Class-III</li>
@@ -428,14 +338,14 @@
                                     <p>The system provides automated control and data collection, reducing the chances for mistakes and improving overall control.</p>
                                     <p>The system is quick to react, enhancing efficiency and real-time performance.</p>
                                     <p>By eliminating mechanical components, the system avoids inaccuracies caused by wear and tear, ensuring precision.</p>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="product-card">
+                        <!-- <div class="product-card">
                             <img src="images/ScreenShorts.png" alt="Insured Weighbridges">
                             <div class="product-info">
-                                <h3>Insured Weighbridges of above types</h3>
-                                <ul>
+                                <h3>Insured Weighbridges of above types</h3> -->
+                                <!-- <ul>
                                     <li>Capacity : 50 Kg to 5000 Kg</li>
                                     <li>Least Count : 5 gm to 500 gm</li>
                                     <li>Accuracy – Class-III</li>
@@ -447,9 +357,9 @@
                                     <p>The system provides automated control and data collection, reducing the chances for mistakes and improving overall control.</p>
                                     <p>The system is quick to react, enhancing efficiency and real-time performance.</p>
                                     <p>By eliminating mechanical components, the system avoids inaccuracies caused by wear and tear, ensuring precision.</p>
-                                </div>
-                            </div>
-                        </div>
+                                </div> -->
+                            <!-- </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -473,7 +383,7 @@
                                 <img src="images/Screenshot (15) 3.png" alt="Simple Platform Weighing Scales">
                                 <div class="product-info">
                                     <h3>Simple Platform Weighing Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Model : FAP</li>
                                         <li>Capacity : 50 Kg to 5000 Kg</li>
                                         <li>Least Count : 5 gm to 500 gm</li>
@@ -497,14 +407,14 @@
                                         <li>Multi Load Cell System available from 1000kg to 10000kg</li>
                                         <li>Piece Counting of light Weight Components</li>
                                         <li>Auto Stand by mode to enhance Battery life</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Product/heavy-duty-platform-scale.jpg" alt="Heavy Duty Platform Weighing Scales">
                                 <div class="product-info">
                                     <h3>Heavy Duty Platform Weighing Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Model : FAP</li>
                                         <li>Capacity : 50 Kg to 5000 Kg</li>
                                         <li>Least Count : 5 gm to 500 gm</li>
@@ -528,14 +438,14 @@
                                         <li>Multi Load Cell System available from 1000kg to 10000kg</li>
                                         <li>Piece Counting of light Weight Components</li>
                                         <li>Auto Stand by mode to enhance Battery life</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Product/platform-scale-balance.jpeg" alt="Dormant Platform Weighing Scales">
                                 <div class="product-info">
                                     <h3>Dormant Platform Weighing Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Model : FAP</li>
                                         <li>Capacity : 50 Kg to 5000 Kg</li>
                                         <li>Least Count : 5 gm to 500 gm</li>
@@ -559,7 +469,7 @@
                                         <li>Multi Load Cell System available from 1000kg to 10000kg</li>
                                         <li>Piece Counting of light Weight Components</li>
                                         <li>Auto Stand by mode to enhance Battery life</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <!-- Duplicate set for seamless loop -->
@@ -567,7 +477,7 @@
                                 <img src="images/Screenshot (15) 3.png" alt="Simple Platform Weighing Scales">
                                 <div class="product-info">
                                     <h3>Simple Platform Weighing Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Model : FAP</li>
                                         <li>Capacity : 50 Kg to 5000 Kg</li>
                                         <li>Least Count : 5 gm to 500 gm</li>
@@ -591,14 +501,14 @@
                                         <li>Multi Load Cell System available from 1000kg to 10000kg</li>
                                         <li>Piece Counting of light Weight Components</li>
                                         <li>Auto Stand by mode to enhance Battery life</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Product/heavy-duty-platform-scale.jpg" alt="Heavy Duty Platform Weighing Scales">
                                 <div class="product-info">
                                     <h3>Heavy Duty Platform Weighing Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Model : FAP</li>
                                         <li>Capacity : 50 Kg to 5000 Kg</li>
                                         <li>Least Count : 5 gm to 500 gm</li>
@@ -622,14 +532,14 @@
                                         <li>Multi Load Cell System available from 1000kg to 10000kg</li>
                                         <li>Piece Counting of light Weight Components</li>
                                         <li>Auto Stand by mode to enhance Battery life</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Product/platform-scale-balance.jpeg" alt="Dormant Platform Weighing Scales">
                                 <div class="product-info">
                                     <h3>Dormant Platform Weighing Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Model : FAP</li>
                                         <li>Capacity : 50 Kg to 5000 Kg</li>
                                         <li>Least Count : 5 gm to 500 gm</li>
@@ -653,7 +563,7 @@
                                         <li>Multi Load Cell System available from 1000kg to 10000kg</li>
                                         <li>Piece Counting of light Weight Components</li>
                                         <li>Auto Stand by mode to enhance Battery life</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -669,220 +579,220 @@
                                 <img src="images/Screenshot (15) 3.png" alt="FDT Model Scale">
                                 <div class="product-info">
                                     <h3>Bench Platform Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Capacity : 1 Kg to 50 Kg</li>
                                         <li>Least Count : 100 mg to 5 gm</li>
                                         <li>Accuracy – Class-III</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Screenshot (16) 2.png" alt="FDT Model Scale">
                                 <div class="product-info">
-                                    <h3>Floor Platform Scales</h3>
-                                    <ul>
+                                    <h3>Jewellery Scales</h3>
+                                    <!-- <ul>
                                         <li>Capacity : 1 Kg to 50 Kg</li>
                                         <li>Least Count : 100 mg to 5 gm</li>
                                         <li>Accuracy – Class-III</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Screenshot (19) 2.png" alt="FDT Model Scale">
                                 <div class="product-info">
                                     <h3>Table Top / Counter Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Capacity : 1 Kg to 50 Kg</li>
                                         <li>Least Count : 100 mg to 5 gm</li>
                                         <li>Accuracy – Class-III</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Screenshot (20) 2.png" alt="FDT Model Scale">
                                 <div class="product-info">
-                                    <h3>Crane Scales</h3>
-                                    <ul>
+                                    <h3>Hanging Scales</h3>
+                                    <!-- <ul>
                                         <li>Capacity : 1 Kg to 50 Kg</li>
                                         <li>Least Count : 100 mg to 5 gm</li>
                                         <li>Accuracy – Class-III</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Screenshot (15) 3.png" alt="FDT Model Scale">
                                 <div class="product-info">
-                                    <h3>Hanging Scales</h3>
-                                    <ul>
+                                    <h3>Platform Scales</h3>
+                                    <!-- <ul>
                                         <li>Capacity : 1 Kg to 50 Kg</li>
                                         <li>Least Count : 100 mg to 5 gm</li>
                                         <li>Accuracy – Class-III</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Screenshot (16) 2.png" alt="FDT Model Scale">
                                 <div class="product-info">
                                     <h3>Jewelry Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Capacity : 1 Kg to 50 Kg</li>
                                         <li>Least Count : 100 mg to 5 gm</li>
                                         <li>Accuracy – Class-III</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Screenshot (19) 2.png" alt="FDT Model Scale">
                                 <div class="product-info">
                                     <h3>Laboratory Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Capacity : 1 Kg to 50 Kg</li>
                                         <li>Least Count : 100 mg to 5 gm</li>
                                         <li>Accuracy – Class-III</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Screenshot (20) 2.png" alt="FDT Model Scale">
                                 <div class="product-info">
                                     <h3>Precision Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Capacity : 1 Kg to 50 Kg</li>
                                         <li>Least Count : 100 mg to 5 gm</li>
                                         <li>Accuracy – Class-III</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Screenshot (15) 3.png" alt="FDT Model Scale">
                                 <div class="product-info">
                                     <h3>Counting Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Capacity : 1 Kg to 50 Kg</li>
                                         <li>Least Count : 100 mg to 5 gm</li>
                                         <li>Accuracy – Class-III</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Screenshot (16) 2.png" alt="FDT Model Scale">
                                 <div class="product-info">
-                                    <h3>Industrial Scales</h3>
-                                    <ul>
+                                    <h3>Jewellery Scales</h3>
+                                    <!-- <ul>
                                         <li>Capacity : 1 Kg to 50 Kg</li>
                                         <li>Least Count : 100 mg to 5 gm</li>
                                         <li>Accuracy – Class-III</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Screenshot (19) 2.png" alt="FDT Model Scale">
                                 <div class="product-info">
                                     <h3>Commercial Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Capacity : 1 Kg to 50 Kg</li>
                                         <li>Least Count : 100 mg to 5 gm</li>
                                         <li>Accuracy – Class-III</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Screenshot (20) 2.png" alt="FDT Model Scale">
                                 <div class="product-info">
                                     <h3>Retail Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Capacity : 1 Kg to 50 Kg</li>
                                         <li>Least Count : 100 mg to 5 gm</li>
                                         <li>Accuracy – Class-III</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Screenshot (15) 3.png" alt="FDT Model Scale">
                                 <div class="product-info">
                                     <h3>Medical Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Capacity : 1 Kg to 50 Kg</li>
                                         <li>Least Count : 100 mg to 5 gm</li>
                                         <li>Accuracy – Class-III</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Screenshot (16) 2.png" alt="FDT Model Scale">
                                 <div class="product-info">
                                     <h3>Veterinary Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Capacity : 1 Kg to 50 Kg</li>
                                         <li>Least Count : 100 mg to 5 gm</li>
                                         <li>Accuracy – Class-III</li>
-                                </ul>
+                                    </ul> -->
+                                </div>
                             </div>
-                        </div>
-                        <div class="product-card">
+                            <div class="product-card">
                                 <img src="images/Screenshot (19) 2.png" alt="FDT Model Scale">
-                            <div class="product-info">
+                                <div class="product-info">
                                     <h3>Agricultural Scales</h3>
-                                <ul>
-                                    <li>Capacity : 1 Kg to 50 Kg</li>
-                                    <li>Least Count : 100 mg to 5 gm</li>
-                                    <li>Accuracy – Class-III</li>
-                                </ul>
-                            </div>
+                                    <!-- <ul>
+                                        <li>Capacity : 1 Kg to 50 Kg</li>
+                                        <li>Least Count : 100 mg to 5 gm</li>
+                                        <li>Accuracy – Class-III</li>
+                                    </ul> -->
+                                </div>
                             </div>
                             <div class="product-card">
                                 <img src="images/Screenshot (20) 2.png" alt="FDT Model Scale">
                                 <div class="product-info">
                                     <h3>Food Scales</h3>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Capacity : 1 Kg to 50 Kg</li>
                                         <li>Least Count : 100 mg to 5 gm</li>
                                         <li>Accuracy – Class-III</li>
-                                    </ul>
-                        </div>
-                    </div>
-                        <div class="product-card">
-                            <img src="images/Screenshot (15) 3.png" alt="FDT Model Scale">
-                            <div class="product-info">
+                                    </ul> -->
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="images/Screenshot (15) 3.png" alt="FDT Model Scale">
+                                <div class="product-info">
                                     <h3>Shipping Scales</h3>
-                                <ul>
-                                    <li>Capacity : 1 Kg to 50 Kg</li>
-                                    <li>Least Count : 100 mg to 5 gm</li>
-                                    <li>Accuracy – Class-III</li>
-                                </ul>
+                                    <!-- <ul>
+                                        <li>Capacity : 1 Kg to 50 Kg</li>
+                                        <li>Least Count : 100 mg to 5 gm</li>
+                                        <li>Accuracy – Class-III</li>
+                                    </ul> -->
+                                </div>
                             </div>
-                        </div>
-                        <div class="product-card">
-                            <img src="images/Screenshot (16) 2.png" alt="FDT Model Scale">
-                            <div class="product-info">
+                            <div class="product-card">
+                                <img src="images/Screenshot (16) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
                                     <h3>Postal Scales</h3>
-                                <ul>
-                                    <li>Capacity : 1 Kg to 50 Kg</li>
-                                    <li>Least Count : 100 mg to 5 gm</li>
-                                    <li>Accuracy – Class-III</li>
-                                </ul>
+                                    <!-- <ul>
+                                        <li>Capacity : 1 Kg to 50 Kg</li>
+                                        <li>Least Count : 100 mg to 5 gm</li>
+                                        <li>Accuracy – Class-III</li>
+                                    </ul> -->
+                                </div>
                             </div>
-                        </div>
-                        <div class="product-card">
-                            <img src="images/Screenshot (19) 2.png" alt="FDT Model Scale">
-                            <div class="product-info">
+                            <div class="product-card">
+                                <img src="images/Screenshot (19) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
                                     <h3>Kitchen Scales</h3>
-                                <ul>
-                                    <li>Capacity : 1 Kg to 50 Kg</li>
-                                    <li>Least Count : 100 mg to 5 gm</li>
-                                    <li>Accuracy – Class-III</li>
-                                </ul>
+                                    <!-- <ul>
+                                        <li>Capacity : 1 Kg to 50 Kg</li>
+                                        <li>Least Count : 100 mg to 5 gm</li>
+                                        <li>Accuracy – Class-III</li>
+                                    </ul> -->
+                                </div>
                             </div>
-                        </div>
-                        <div class="product-card">
-                            <img src="images/Screenshot (20) 2.png" alt="FDT Model Scale">
-                            <div class="product-info">
+                            <div class="product-card">
+                                <img src="images/Screenshot (20) 2.png" alt="FDT Model Scale">
+                                <div class="product-info">
                                     <h3>Portable Scales</h3>
-                                <ul>
-                                    <li>Capacity : 1 Kg to 50 Kg</li>
-                                    <li>Least Count : 100 mg to 5 gm</li>
-                                    <li>Accuracy – Class-III</li>
-                                </ul>
+                                    <!-- <ul>
+                                        <li>Capacity : 1 Kg to 50 Kg</li>
+                                        <li>Least Count : 100 mg to 5 gm</li>
+                                        <li>Accuracy – Class-III</li>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -1044,7 +954,7 @@
                             <p>GLOBAL ASSOCIATES</p>
                         </div>
                         <div class="client-card">
-                            <img src="images/companies//d-n-homes-pvt-ltd--irc-village-bhubaneshwar-builders-and-developers-1fen62fs5w-250.jpg.webp" alt="DN Logo">
+                            <img src="images/companies//d-n-homes-pvt-ltd--irc-village-bhubaneswar-builders-and-developers-1fen62fs5w-250.jpg.webp" alt="DN Logo">
                             <p>DN GROUP OF COMPANIES</p>
                         </div>
 
