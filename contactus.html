@@ -31,23 +31,35 @@
             padding: 40px 24px;
             max-width: 1100px;
             display: flex;
-            align-items: stretch;
-            gap: 0;
+            flex-direction: column;
+            align-items: center;
             animation: fadeInUp 1s ease;
         }
-        .contact-images {
+        .contact-header-row {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             align-items: center;
-            padding: 24px 0;
-            background: transparent;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 32px;
+            gap: 32px;
         }
-        .contact-images img {
-            width: 180px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            margin: 16px 0;
+        .contact-header-row .contact-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-header-row .contact-image img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+        .contact-header-row h2 {
+            color: #ffe600;
+            margin: 0 32px;
+            font-size: 2.2rem;
+            white-space: nowrap;
         }
         .contact-details {
             flex: 2 1 400px;
@@ -108,23 +120,19 @@
         .contact-form {
             animation: fadeInUp 1.2s 0.2s both;
         }
-        @media (max-width: 1100px) {
-            .contact-section {
+        @media (max-width: 700px) {
+            .contact-header-row {
                 flex-direction: column;
-                align-items: center;
-                padding: 24px 8px;
+                gap: 16px;
             }
-            .contact-details {
-                padding: 0;
-            }
-            .contact-images {
-                flex-direction: row;
-                width: 100%;
-                justify-content: space-between;
-            }
-            .contact-images img {
-                width: 45vw;
+            .contact-header-row .contact-image img {
+                width: 80vw;
                 max-width: 180px;
+                height: auto;
+            }
+            .contact-header-row h2 {
+                margin: 0;
+                font-size: 1.5rem;
             }
         }
         @keyframes fadeInUp {
@@ -167,22 +175,29 @@
 
     <!-- Contact Section -->
     <section class="contact-section">
-        <div class="contact-images">
-            <img src="images/Weigh Bridge.jpg" alt="Weigh Bridge Left">
-            <img src="images/ScreenShorts.png" alt="Weigh Bridge Right">
+        <div class="contact-header-logo" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 16px;">
+            <img src="images/logo1 1.svg" alt="Fortune Scales Logo" style="width: 140px; height: auto; margin-bottom: 8px;">
         </div>
-        <div class="contact-details">
+        <div class="contact-header-row">
+            <div class="contact-image">
+                <img src="images/Weigh Bridge.jpg" alt="Weigh Bridge Left" style="width: 240px; height: auto;">
+            </div>
             <h2>Contact Us</h2>
-            <p><strong>Address:</strong><br>
+            <div class="contact-image">
+                <img src="images/ScreenShorts.png" alt="Weigh Bridge Right" style="width: 240px; height: auto;">
+            </div>
+        </div>
+        <div class="contact-details" style="align-items: center; text-align: center;">
+            <p style="max-width: 500px; margin: 0 auto 10px auto;"><strong>Address:</strong><br>
                 A/2, Bhouma Nagar, Unit-4,<br>
                 Bhubaneswar, 751001, Odisha, India</p>
             <p><strong>Phone:</strong> +91 9437078415, 0674 - 2390115 (10 AM-6 PM), Sunday Closed</p>
             <p><strong>Email:</strong> fortunescales@yahoo.com</p>
-            <p><strong>Website:</strong> <a href="http://fortunescales.business.site" target="_blank" style="color:#008000;">fortunescales.business.site</a></p>
-            <ul>
+            <p><strong>Website:</strong> <a href="http://fortunescales.business.site" target="_blank" style="color:#ffe600;">fortunescales.business.site</a></p>
+            <ul style="list-style: none; padding: 0; margin-bottom: 18px;">
                 <li>For product inquiries, service requests, or support, please use the form below or contact us directly.</li>
             </ul>
-            <form class="contact-form" id="contactForm">
+            <form class="contact-form" id="contactForm" style="max-width: 400px; margin: 0 auto;">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
                 <label for="email">Email</label>

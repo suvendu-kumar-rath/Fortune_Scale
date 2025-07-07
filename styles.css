@@ -858,6 +858,15 @@ nav ul li a:hover {
     flex: 0 0 300px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 300px !important;
+    max-height: 400px !important;
+    height: 340px !important;
+    padding: 36px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .weighing-scales-section .product-card img {
@@ -867,6 +876,7 @@ nav ul li a:hover {
     padding: 1rem;
     background: white;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 24px;
 }
 
 .weighing-scales-section .product-info {
@@ -930,11 +940,14 @@ nav ul li a:hover {
 }
 
 .other-products-section .product-card {
-    text-align: center;
+    max-height: 260px;
+    min-height: 180px;
+    padding: 16px 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .other-products-section .product-card img {
